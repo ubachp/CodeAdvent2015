@@ -8,6 +8,7 @@ namespace CodeAdvent2015
         public static async Task Run()
         {
             await new Day01(Cookie).Solve();
+            await new Day02(Cookie).Solve();
         }
     }
 }

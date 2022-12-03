@@ -1,6 +1,6 @@
-﻿using CodeAdvent2022.Shared;
+﻿using CodeAdvent2015.Shared;
 
-namespace CodeAdvent2022.Challenges
+namespace CodeAdvent2015.Challenges
 {
     public class Day01 : AdventDayBase, IAdventDay
     {
