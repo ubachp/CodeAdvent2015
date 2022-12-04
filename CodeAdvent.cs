@@ -7,10 +7,11 @@ namespace CodeAdvent2015
         public static string Cookie { get; set; }
         public static async Task Run()
         {
-            await new Day01(Cookie).Solve();
-            await new Day02(Cookie).Solve();
-            await new Day03(Cookie).Solve();
-            await new Day04(Cookie).Solve();
+            //await new Day01(Cookie).Solve();
+            //await new Day02(Cookie).Solve();
+            //await new Day03(Cookie).Solve();
+            //await new Day04(Cookie).Solve();
+            await new Day05(Cookie).Solve();
         }
     }
 }
