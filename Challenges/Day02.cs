@@ -13,12 +13,13 @@ namespace CodeAdvent2015.Challenges
             string input = await Helper.GetInput(@"https://adventofcode.com/2015/day/2/input", Cookie);
             var inputArray = input.Split("\n");
             var totalWrapping = 0;
+            var totalRibbon = 0;
 
             foreach (var line in inputArray)
             {
                 if (string.IsNullOrWhiteSpace(line)) continue;
                 var dimension = line.Split("x");
-                Console.WriteLine(line);
+
                 var length = int.Parse(dimension[0]);
                 var width = int.Parse(dimension[1]);
                 var height = int.Parse(dimension[2]);
@@ -32,9 +33,15 @@ namespace CodeAdvent2015.Challenges
                 var slack = new List<int>() { lengthWidth, widthHeight, heightLength }.Min();
 
                 totalWrapping += wrappingSize + slack;
+                
+                var sides = new List<int>() { length, width, height }.OrderBy(x=>x).ToArray();
+                var ribbon = (2 * sides[0]) + (2 * sides[1]);
+                var bow = length * width * height;
+
+                totalRibbon += ribbon + bow;
             }
 
-            Helper.PrintResults("total wrapping papper", totalWrapping, "position", 0);
+            Helper.PrintResults("total wrapping paper", totalWrapping, "total ribbon", totalRibbon);
         }
     }
 }
