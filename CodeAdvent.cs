@@ -10,9 +10,10 @@ namespace CodeAdvent2015
             await new Day01(Cookie).Solve();
             await new Day02(Cookie).Solve();
             await new Day03(Cookie).Solve();
-            await new Day04(Cookie).Solve();
+            //await new Day04(Cookie).Solve();
             await new Day05(Cookie).Solve();
             await new Day06(Cookie).Solve();
+            await new Day07(Cookie).Solve();
         }
     }
 }
